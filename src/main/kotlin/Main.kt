@@ -47,15 +47,19 @@ fun main() {
         videojuegos[i].devolver()
     }
     println("Videojuegos entregados: "+contadorVideoJuegosEntregados)
+    println("Desea imprimir todos los videojuegos y series?(Y/N)\n")
+    var resp = readLine()!![0]
+    if(resp=='Y'||resp=='y') {
+        for (i in series.indices) {
+            println("=====================")
+            series[i].imprimir()
+            println("=====================")
+        }
+        for (i in videojuegos.indices) {
+            println("=====================")
+            videojuegos[i].imprimir()
+            println("=====================")
+        }
 
-    /*for (i in series.indices){
-        println("=====================")
-        series[i].imprimir()
-        println("=====================")
     }
-    for (i in videojuegos.indices){
-        println("=====================")
-        videojuegos[i].imprimir()
-        println("=====================")
-    }*/
 }
