@@ -34,4 +34,12 @@ class Serie:Entregable {
         this.entregado=true
     }
 
+    override fun imprimir() {
+        println(titulo)
+        println("Temporadas" + this.temporadas)
+        println("Está entregado? "+this.isEntregado())
+        println("Genero: "+this.genero)
+        println("Creador: "+this.creador)
+    }
+
 }

@@ -36,4 +36,11 @@ class Videojuego :Entregable{
         this.company=companyp
     }
 
+    override fun imprimir() {
+        println(titulo)
+        println("Horas estimadas: " + this.horasEstimadas)
+        println("Está entregado? "+this.isEntregado())
+        println("Genero: "+this.genero)
+        println("Creador: "+this.company)
+    }
 }

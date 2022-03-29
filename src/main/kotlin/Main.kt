@@ -10,6 +10,7 @@ fun main() {
     val serie4 =  Serie("WaywardSon",2,true,"XD", "LukeJack")
     val serie5 =  Serie("WaywardPines",2,false,"Drama", "MichaelBlake")
     serie2.entregar()
+    serie5.entregar()
     series  = series .plus(serie1)
     series  = series .plus(serie2)
     series  = series .plus(serie3)
@@ -30,19 +31,31 @@ fun main() {
     videojuegos = videojuegos.plus(vj4)
     videojuegos = videojuegos.plus(vj5)
 
-    println(series.size)
     var contadorSeriesEntregadas:Int=0
     var contadorVideoJuegosEntregados:Int=0
 
     for (i in series.indices){
-        if(series[i].entregado==true)
+        if(series[i].isEntregado()==true)
         contadorSeriesEntregadas++
+        series[i].devolver()
     }
     println("Series entregadas: "+contadorSeriesEntregadas)
+
     for (i in videojuegos.indices){
-        if(videojuegos[i].entregado==true)
+        if(videojuegos[i].isEntregado()==true)
             contadorVideoJuegosEntregados++
+        videojuegos[i].devolver()
     }
     println("Videojuegos entregados: "+contadorVideoJuegosEntregados)
 
+    /*for (i in series.indices){
+        println("=====================")
+        series[i].imprimir()
+        println("=====================")
+    }
+    for (i in videojuegos.indices){
+        println("=====================")
+        videojuegos[i].imprimir()
+        println("=====================")
+    }*/
 }

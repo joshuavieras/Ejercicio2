@@ -9,4 +9,7 @@ interface Entregable {
     fun isEntregado():Boolean{
         return false
     }
+    fun imprimir(){
+        
+    }
 }
